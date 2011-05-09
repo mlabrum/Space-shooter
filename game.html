@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<style type="text/css">
+			#game { border: 1px solid black; }
+			#ship, #asteroid {
+				display: none;
+			}
+		</style>
+		<script type="text/javascript" src="spaceGame.js"></script>
+		<script>
+			// Start our game once the DOM is ready
+			var game;
+			document.addEventListener("DOMContentLoaded", function(){
+				game = new SpaceGame({
+					Canvas   : document.getElementById("game"),
+					Ship      : document.getElementById("ship"),
+					Asteroid : document.getElementById("asteroid")
+				});
+			}, false);	
+		</script>
+	</head>
+	<body>
+		<canvas id="game" width="600" height="300">
+			Sorry :( canvas isn't supported by your browser
+		</canvas>
+		<img src="sprites/ship.png" id="ship" />
+		<img src="sprites/asteroid.png" id="asteroid" />
+	</body>
+</html>
